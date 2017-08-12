@@ -152,19 +152,18 @@ class CompassDrawView : View {
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         mCanvas = canvas
-        canvas.save()
+        canvas.save()           //保存画布，先旋转和方向无关的东西
         canvas.rotate(mDirection, (width / 2).toFloat(), (height / 2).toFloat())
         drawBackGroundCircle()
         drawScaleLine()
-        canvas.restore()
+        canvas.restore()        //重置画布
 
         canvas.save()
-        drawDirectionText()
+        drawDirectionText()     //重置画布后通过传感器角度来确定文字的位置，以达到文字问正的情况
         drawAngleText()
         canvas.rotate(mDirection, (width / 2).toFloat(), (height / 2).toFloat())
         canvas.restore()
-
-        drawNHand()
+        drawNHand()             //最后画不需要动的指针
     }
 
     /**

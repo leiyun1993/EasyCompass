@@ -63,3 +63,26 @@ if (direction > 122.5f || direction < -122.5f) {
     // north
 }
 ```
+## 关于表盘的的简单说明
+
+1、 表盘使用自定义View完成，通过绘制文字表盘刻度等实现无论如何旋转文字都是正的，大体思路如下；此View是使用最笨的
+方式去实现的，还有很多需要完善的地方
+```
+canvas.save()           //保存画布，先旋转和方向无关的东西
+canvas.rotate(mDirection, (width / 2).toFloat(), (height / 2).toFloat())
+drawBackGroundCircle()
+drawScaleLine()
+canvas.restore()        //重置画布
+
+canvas.save()
+drawDirectionText()     //重置画布后通过传感器角度来确定文字的位置，以达到文字问正的情况
+drawAngleText()
+canvas.rotate(mDirection, (width / 2).toFloat(), (height / 2).toFloat())
+canvas.restore()
+drawNHand()             //最后画不需要动的指针
+```
+
+## 简易指南针预览如下
+
+![image](https://github.com/leiyun1993/EasyCompass/raw/master/screenshot/01.jpg)
+![image](https://github.com/leiyun1993/EasyCompass/raw/master/screenshot/02.jpg)
