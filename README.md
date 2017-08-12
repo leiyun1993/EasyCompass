@@ -84,5 +84,5 @@ drawNHand()             //最后画不需要动的指针
 
 ## 简易指南针预览如下
 
-![image](https://github.com/leiyun1993/EasyCompass/raw/master/screenshot/01.jpg)
-![image](https://github.com/leiyun1993/EasyCompass/raw/master/screenshot/02.jpg)
+![image](https://github.com/leiyun1993/EasyCompass/raw/master/screenshot/1.jpg)
+![image](https://github.com/leiyun1993/EasyCompass/raw/master/screenshot/2.jpg)
