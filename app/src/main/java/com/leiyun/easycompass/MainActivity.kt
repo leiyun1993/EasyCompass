@@ -150,6 +150,7 @@ class MainActivity : AppCompatActivity(), Runnable, TencentLocationListener {
         var north: ImageView? = null
         val direction = values[0]
 
+        //根据角度计算方位
         if (direction >= 22.5f && direction < 157.5f) {
             //east
             east = ImageView(this)
