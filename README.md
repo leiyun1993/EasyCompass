@@ -86,3 +86,13 @@ drawNHand()             //最后画不需要动的指针
 
 ![image](https://github.com/leiyun1993/EasyCompass/raw/master/screenshot/1.jpg)
 ![image](https://github.com/leiyun1993/EasyCompass/raw/master/screenshot/2.jpg)
+
+## 相关链接
+
+1、感谢[MIUI指南针社区开源版](https://github.com/MiCode/Compass)
+
+2、UI没啥灵感于是参考了[MiClockView](https://github.com/MonkeyMushroom/MiClockView),非常感谢
+
+3、Google 2017IO大会指定Android开发语言[Kotlin](https://github.com/JetBrains/kotlin)
+
+4、Anko是一个使开发Android应用更简单更快捷的库[Anko](https://github.com/Kotlin/anko)
