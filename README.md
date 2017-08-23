@@ -4,7 +4,7 @@
 ## 关于传感器的简单说明
 
 1、初始化
-```
+```kotlin
 fun initServices() {
     mSensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
     mOrientationSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) //加速度传感器
@@ -12,7 +12,7 @@ fun initServices() {
 }
 ```
 2、设置监听和取消监听
-```
+```kotlin
 override fun onResume() {
     super.onResume()
     mOrientationListener = MySensorEventListener()
@@ -51,7 +51,7 @@ inner class MySensorEventListener : SensorEventListener2 {
 }
 ```
 3、判断方向
-```
+```kotlin
 if (direction >= 22.5f && direction < 157.5f) {
     //east
 } else if (direction > -157.5f && direction < -22.5f) {
@@ -67,7 +67,7 @@ if (direction > 122.5f || direction < -122.5f) {
 
 1、 表盘使用自定义View完成，通过绘制文字表盘刻度等实现无论如何旋转文字都是正的，大体思路如下；此View是使用最笨的
 方式去实现的，还有很多需要完善的地方
-```
+```kotlin
 canvas.save()           //保存画布，先旋转和方向无关的东西
 canvas.rotate(mDirection, (width / 2).toFloat(), (height / 2).toFloat())
 drawBackGroundCircle()
